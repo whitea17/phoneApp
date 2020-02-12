@@ -13,6 +13,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     ui->addressBookView->setModel(AddressDBmodel);
 
+    // Adds dashes and limits phone number to 10 digits
+    ui -> dialerNumber -> setValidator( new QIntValidator(0, 9, this) );
+    ui -> dialerNumber -> setInputMask("");
+    ui -> dialerNumber -> setInputMask("999-999-9999");
+    ui -> dialerNumber -> setMaxLength(10);
 }
 
 MainWindow::~MainWindow()
