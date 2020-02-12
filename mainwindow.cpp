@@ -116,3 +116,10 @@ void MainWindow::on_backspaceButton_clicked()
     UpdateAddressModelView();
 
 }
+
+void MainWindow::on_addressBookView_clicked(const QModelIndex &index)
+{
+    int row = index.row();
+    QString phoneNum = AddressDBmodel->getPhoneNumber(row);
+    ui->dialerNumber->setText(phoneNum);
+}

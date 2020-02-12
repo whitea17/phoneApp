@@ -38,6 +38,8 @@ private slots:
 
     void on_backspaceButton_clicked();
 
+    void on_addressBookView_clicked(const QModelIndex &index);
+
 private:
     Ui::MainWindow *ui;
     AddressBookModel *AddressDBmodel;
