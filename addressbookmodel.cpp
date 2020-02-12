@@ -88,7 +88,7 @@ void AddressBookModel::setFilterString(QString fStr)
 
     // check if phone numbers fit with the filter string.
     for (int i = 0; i < phoneNumbers.size(); i++) {
-        if (phoneNumbers[i].remove("-").startsWith(fStr)) {
+        if (phoneNumbers[i].remove("-").startsWith(fStr) || nameInNumbers[i].contains(fStr) ) {
             filteredIndex.push_back(i);
 
         }
