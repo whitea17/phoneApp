@@ -42,5 +42,6 @@ private:
     Ui::MainWindow *ui;
     AddressBookModel *AddressDBmodel;
     void AddNumToDisplay(QString num);
+    void UpdateAddressModelView();
 };
 #endif // MAINWINDOW_H

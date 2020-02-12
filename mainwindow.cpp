@@ -38,8 +38,15 @@ void MainWindow::on_actionAdd_Address_Booklet_triggered()
     AddressDBmodel->openFile(fileName);
 }
 
+void MainWindow::UpdateAddressModelView(){
+    QString numToSearch = ui->dialerNumber->text().remove("-");;
+    AddressDBmodel->setFilterString(numToSearch);
+    std::cout << numToSearch.toStdString() << std::endl;
+}
+
 void MainWindow::AddNumToDisplay(QString num){
     ui->dialerNumber->insert(num);
+    UpdateAddressModelView();
 }
 
 void MainWindow::on_db1_clicked()
@@ -106,4 +113,6 @@ void MainWindow::on_dbHash_clicked()
 void MainWindow::on_backspaceButton_clicked()
 {
     ui -> dialerNumber ->backspace();
+    UpdateAddressModelView();
+
 }
