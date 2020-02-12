@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui -> dialerNumber -> setInputMask("");
     ui -> dialerNumber -> setInputMask("999-999-9999");
     ui -> dialerNumber -> setMaxLength(10);
+
 }
 
 MainWindow::~MainWindow()
