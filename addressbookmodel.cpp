@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <iostream>
 #include <QTextStream>
+#include <stdio.h>
 
 AddressBookModel::AddressBookModel(QObject *parent)
     :QAbstractTableModel (parent)
@@ -66,6 +67,7 @@ void AddressBookModel::openFile(QString filePath)
         firstNames.push_back(fields[0]);
         lastNames.push_back(fields[1]);
         phoneNumbers.push_back(fields[7]);
+        nameInNumbers.push_back(nameToNum(fields[0]+fields[1]));
 
         filteredIndex.push_back(i);
     }
@@ -93,4 +95,39 @@ void AddressBookModel::setFilterString(QString fStr)
     }
 
     emit layoutChanged();
+}
+
+QString AddressBookModel::nameToNum(QString name){
+    QString num = "";
+    std::string sName = name.toStdString();
+    std::string two = "abc";
+    std::string three = "def";
+    std::string four = "ghi";
+    std::string five = "jkl";
+    std::string six = "mno";
+    std::string seven = "pqrs";
+    std::string eight = "tuv";
+    std::string nine = "wxyz";
+
+    for(size_t i = 0; i < sName.size(); i++){
+        if(two.find(tolower(sName.at(i))) != std::string::npos){
+            num += "2";
+        }else if(three.find(tolower(sName.at(i))) != std::string::npos){
+            num += "3";
+        }else if(four.find(tolower(sName.at(i))) != std::string::npos){
+            num += "4";
+        }else if(five.find(tolower(sName.at(i))) != std::string::npos){
+            num += "5";
+        }else if(six.find(tolower(sName.at(i))) != std::string::npos){
+            num += "6";
+        }else if(seven.find(tolower(sName.at(i))) != std::string::npos){
+            num += "7";
+        }else if(eight.find(tolower(sName.at(i))) != std::string::npos){
+            num += "8";
+        }else if(nine.find(tolower(sName.at(i))) != std::string::npos){
+            num += "9";
+        }
+    }
+
+    return num;
 }

@@ -24,8 +24,11 @@ private:
     std::vector<QString> firstNames;
     std::vector<QString> lastNames;
     std::vector<QString> phoneNumbers;
+    std::vector<QString> nameInNumbers;
 
     std::vector<int> filteredIndex;
+
+    QString nameToNum(QString name);
 
 };
 #endif // ADDRESSBOOKMODEL_H
