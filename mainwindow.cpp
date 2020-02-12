@@ -3,6 +3,7 @@
 
 #include <QFileDialog>
 #include <iostream>
+#include<QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -122,4 +123,15 @@ void MainWindow::on_addressBookView_clicked(const QModelIndex &index)
     int row = index.row();
     QString phoneNum = AddressDBmodel->getPhoneNumber(row);
     ui->dialerNumber->setText(phoneNum);
+}
+
+void MainWindow::on_callButton_clicked()
+{
+    if(ui->dialerNumber->text().remove("-").size() == 10){
+            QString msg = "Calling now...";
+            QMessageBox processed_msg;
+            processed_msg.setText(msg);
+            processed_msg.exec();
+
+    }
 }

@@ -25,6 +25,12 @@ int AddressBookModel::columnCount(const QModelIndex &parent) const
 QVariant AddressBookModel::data(const QModelIndex &index, int role) const
 {
     if (role == Qt::DisplayRole) {
+
+        // stops program from crashing
+        if(index.row() >= firstNames.size()-1){
+            return QVariant();
+        }
+
         switch(index.column()) {
         case 0:
             return firstNames.at(filteredIndex[index.row()]);

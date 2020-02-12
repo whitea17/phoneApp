@@ -40,6 +40,8 @@ private slots:
 
     void on_addressBookView_clicked(const QModelIndex &index);
 
+    void on_callButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     AddressBookModel *AddressDBmodel;
