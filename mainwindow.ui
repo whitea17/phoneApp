@@ -6,15 +6,258 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>745</width>
+    <height>648</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
-  <widget class="QMenuBar" name="menubar"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableView" name="addressBookView">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>100</y>
+      <width>380</width>
+      <height>496</height>
+     </rect>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOn</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="autoScroll">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db1">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db2">
+    <property name="geometry">
+     <rect>
+      <x>137</x>
+      <y>130</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>2
+ABC</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db3">
+    <property name="geometry">
+     <rect>
+      <x>265</x>
+      <y>130</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>3
+DEF</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>233</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>4
+GHI</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db6">
+    <property name="geometry">
+     <rect>
+      <x>265</x>
+      <y>233</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>6
+MNO</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db5">
+    <property name="geometry">
+     <rect>
+      <x>137</x>
+      <y>233</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>5
+JKL</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db7">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>333</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>7
+PQRS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db9">
+    <property name="geometry">
+     <rect>
+      <x>265</x>
+      <y>333</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>9
+WXYZ</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db8">
+    <property name="geometry">
+     <rect>
+      <x>137</x>
+      <y>333</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>8
+TUV</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dbHash">
+    <property name="geometry">
+     <rect>
+      <x>265</x>
+      <y>433</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>#</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dbStar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>433</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>*</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="db0">
+    <property name="geometry">
+     <rect>
+      <x>137</x>
+      <y>433</y>
+      <width>75</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="callButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>521</y>
+      <width>330</width>
+      <height>75</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Call</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="dialerNumber">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>30</y>
+      <width>310</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="backspaceButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>30</y>
+      <width>75</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Backspace</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="dbPlus">
+    <property name="geometry">
+     <rect>
+      <x>455</x>
+      <y>30</y>
+      <width>75</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>745</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
